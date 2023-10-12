@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+int top=-1,maxs=5;
+int arr[5];
+
+void push(int num){
+    if(top==maxs-1)cout<<"overflow"<<"\n";
+    else{
+        top++;
+        arr[top]=num;
+    }
+}
+void pop(){
+    if(top==-1)cout<<"underflow"<<"\n";
+    else top--;
+}
+void display(){
+    for(int i=0;i<=top;i++){
+        cout<<arr[i]<<" ";
+    }
+}
+int main()
+{
+   push(3);
+   pop();
+   pop();
+   push(7);
+   push(5);
+   push(10);
+   push(8);
+   push(2);
+   push(6);
+   display();
+   
+    
+    
+    
+}
